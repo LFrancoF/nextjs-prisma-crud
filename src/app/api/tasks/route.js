@@ -3,7 +3,6 @@ import {prisma} from '@/libs/prisma';
 
 export async function GET() {
     const tasks = await prisma.task.findMany();
-    console.log(tasks);
     return NextResponse.json(tasks);
 }
 
